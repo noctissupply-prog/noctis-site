@@ -52,9 +52,9 @@ document.addEventListener('DOMContentLoaded', () => {
   setLang('en');
 
   // replace these placeholders with your links
-  document.getElementById('vendor-link').href = "https://YOUR_MYAUTH_LINK";
+  document.getElementById('vendor-link').href = "https://noctis-supply.mysellauth.com/";
   document.getElementById('shop-link').href = "https://noctissupply.myshopify.com";
-  document.getElementById('discord-link').href = "https://discord.gg/YOUR_INVITE";
-  document.getElementById('vendor-myauth').href = "https://YOUR_MYAUTH_LINK";
+  document.getElementById('discord-link').href = "https://discord.gg/yRukyB3xJ7";
+  document.getElementById('vendor-myauth').href = "https://noctis-supply.mysellauth.com/";
 });
 
