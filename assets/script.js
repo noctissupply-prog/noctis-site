@@ -1,8 +1,7 @@
-// basic interactivity & EN/DE switch
 document.addEventListener('DOMContentLoaded', () => {
   const enBtn = document.getElementById('lang-en');
   const deBtn = document.getElementById('lang-de');
-  // default English text mapping (if we want to dynamically switch)
+
   const texts = {
     en: {
       heroTitle: "Noctis Supply — Built Different. Powered by Community.",
@@ -48,13 +47,10 @@ document.addEventListener('DOMContentLoaded', () => {
   enBtn.addEventListener('click', () => setLang('en'));
   deBtn.addEventListener('click', () => setLang('de'));
 
-  // initial
-  setLang('en');
-
-  // replace these placeholders with your links
-  document.getElementById('vendor-link').href = "https://noctis-supply.mysellauth.com/";
+  // Replace these placeholders with your actual links
+  document.getElementById('vendor-link').href = "https://YOUR_MYAUTH_LINK";
   document.getElementById('shop-link').href = "https://noctissupply.myshopify.com";
-  document.getElementById('discord-link').href = "https://discord.gg/yRukyB3xJ7";
-  document.getElementById('vendor-myauth').href = "https://noctis-supply.mysellauth.com/";
+  document.getElementById('discord-link').href = "https://discord.gg/YOUR_INVITE";
+  const vendorMyAuth = document.getElementById('vendor-myauth');
+  if(vendorMyAuth) vendorMyAuth.href = "https://YOUR_MYAUTH_LINK";
 });
-
