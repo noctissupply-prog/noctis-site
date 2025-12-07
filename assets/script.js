@@ -4,9 +4,9 @@ document.addEventListener('DOMContentLoaded', ()=> {
   const shopLink = document.getElementById('shop-link');
   const discordLink = document.getElementById('discord-link');
 
-  if(vendorLink) vendorLink.href = "https://YOUR_MYAUTH_LINK";
-  if(shopLink) shopLink.href = "https://YOUR_SHOP_LINK";
-  if(discordLink) discordLink.href = "https://YOUR_DISCORD_INVITE";
+  if(vendorLink) vendorLink.href = "https://noctis-supply.mysellauth.com/";
+  if(shopLink) shopLink.href = "https://noctissupply.myshopify.com";
+  if(discordLink) discordLink.href = "https://discord.gg/jRuStP7yXw";
 
   // Language toggle (EN / DE)
   const enBtn = document.getElementById('lang-en');
