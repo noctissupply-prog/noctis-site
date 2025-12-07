@@ -48,9 +48,9 @@ document.addEventListener('DOMContentLoaded', () => {
   deBtn.addEventListener('click', () => setLang('de'));
 
   // Replace these placeholders with your actual links
-  document.getElementById('vendor-link').href = "https://YOUR_MYAUTH_LINK";
+  document.getElementById('vendor-link').href = "https://noctis-supply.mysellauth.com/";
   document.getElementById('shop-link').href = "https://noctissupply.myshopify.com";
-  document.getElementById('discord-link').href = "https://discord.gg/YOUR_INVITE";
+  document.getElementById('discord-link').href = "https://discord.gg/jRuStP7yXw";
   const vendorMyAuth = document.getElementById('vendor-myauth');
-  if(vendorMyAuth) vendorMyAuth.href = "https://YOUR_MYAUTH_LINK";
+  if(vendorMyAuth) vendorMyAuth.href = "https://noctis-supply.mysellauth.com/";
 });
