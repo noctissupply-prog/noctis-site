@@ -1,56 +1,60 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', ()=> {
+  // Replace these IDs/links with your values when editing
+  const vendorLink = document.getElementById('vendor-link');
+  const shopLink = document.getElementById('shop-link');
+  const discordLink = document.getElementById('discord-link');
+
+  if(vendorLink) vendorLink.href = "https://YOUR_MYAUTH_LINK";
+  if(shopLink) shopLink.href = "https://YOUR_SHOP_LINK";
+  if(discordLink) discordLink.href = "https://YOUR_DISCORD_INVITE";
+
+  // Language toggle (EN / DE)
   const enBtn = document.getElementById('lang-en');
   const deBtn = document.getElementById('lang-de');
-
-  const texts = {
-    en: {
+  const textMap = {
+    en:{
       heroTitle: "Noctis Supply — Built Different. Powered by Community.",
       heroSub: "Premium vendors, verified drops and curated products. No gimmicks — real value.",
       whoTitle: "Who we are",
       whoText: "Noctis Supply connects trusted vendors with a focused community. Automation, reliability, and quality come together to offer curated streetwear, fragrances and tech essentials.",
-      offer1: "Verified Vendor Links",
-      offer1t: "Secure MyAuth delivery and automation for digital products.",
-      offer2: "Physical Products",
-      offer2t: "Selected products via Shopify — secure shipping and tracking.",
-      offer3: "VIP Access",
-      offer3t: "One-time VIP membership (manual approval). Priority drops & support."
+      card1: "Verified Vendor Links",
+      card1t: "Secure MyAuth delivery and automation for digital products.",
+      card2: "Physical Products",
+      card2t: "Selected products via Shopify — secure shipping and tracking.",
+      card3: "VIP Access",
+      card3t: "One-time VIP membership (manual approval). Priority drops & support."
     },
-    de: {
+    de:{
       heroTitle: "Noctis Supply — Anders gebaut. Von einer Community getragen.",
       heroSub: "Premium Vendoren, verifizierte Drops und exklusive Produkte. Kein Hype. Echter Wert.",
       whoTitle: "Über uns",
       whoText: "Noctis Supply verbindet vertrauenswürdige Vendoren mit einer fokussierten Community. Wir kombinieren Automatisierung, Zuverlässigkeit und Qualität.",
-      offer1: "Verifizierte Vendor-Links",
-      offer1t: "Sichere MyAuth-Lieferung und Automatisierung für digitale Produkte.",
-      offer2: "Physische Produkte",
-      offer2t: "Ausgewählte Produkte über Shopify — sichere Lieferung und Tracking.",
-      offer3: "VIP Zugang",
-      offer3t: "Einmalige VIP-Mitgliedschaft (manuelle Freischaltung). Priorisierte Drops & Support."
+      card1: "Verifizierte Vendor-Links",
+      card1t: "Sichere MyAuth-Lieferung und Automatisierung für digitale Produkte.",
+      card2: "Physische Produkte",
+      card2t: "Ausgewählte Produkte über Shopify — sichere Lieferung und Tracking.",
+      card3: "VIP Zugang",
+      card3t: "Einmalige VIP-Mitgliedschaft (manuelle Freischaltung). Priorisierte Drops & Support."
     }
   };
 
-  function setLang(l) {
-    document.getElementById('hero-title').textContent = texts[l].heroTitle;
-    document.getElementById('hero-sub').textContent = texts[l].heroSub;
-    document.getElementById('who-title').textContent = texts[l].whoTitle;
-    document.getElementById('who-text').textContent = texts[l].whoText;
-    document.getElementById('offer-1').textContent = texts[l].offer1;
-    document.getElementById('offer-1-t').textContent = texts[l].offer1t;
-    document.getElementById('offer-2').textContent = texts[l].offer2;
-    document.getElementById('offer-2-t').textContent = texts[l].offer2t;
-    document.getElementById('offer-3').textContent = texts[l].offer3;
-    document.getElementById('offer-3-t').textContent = texts[l].offer3t;
-    if(l === 'en'){ enBtn.classList.add('active'); deBtn.classList.remove('active'); }
-    else { deBtn.classList.add('active'); enBtn.classList.remove('active'); }
+  function setLang(l){
+    if(!textMap[l]) return;
+    document.getElementById('hero-title').textContent = textMap[l].heroTitle;
+    document.getElementById('hero-sub').textContent = textMap[l].heroSub;
+    document.getElementById('who-title').textContent = textMap[l].whoTitle;
+    document.getElementById('who-text').textContent = textMap[l].whoText;
+    document.getElementById('offer-1').textContent = textMap[l].card1;
+    document.getElementById('offer-1-t').textContent = textMap[l].card1t;
+    document.getElementById('offer-2').textContent = textMap[l].card2;
+    document.getElementById('offer-2-t').textContent = textMap[l].card2t;
+    document.getElementById('offer-3').textContent = textMap[l].card3;
+    document.getElementById('offer-3-t').textContent = textMap[l].card3t;
+    enBtn.classList.toggle('active', l === 'en');
+    deBtn.classList.toggle('active', l === 'de');
   }
 
-  enBtn.addEventListener('click', () => setLang('en'));
-  deBtn.addEventListener('click', () => setLang('de'));
-
-  // Replace these placeholders with your actual links
-  document.getElementById('vendor-link').href = "https://noctis-supply.mysellauth.com/";
-  document.getElementById('shop-link').href = "https://noctissupply.myshopify.com";
-  document.getElementById('discord-link').href = "https://discord.gg/jRuStP7yXw";
-  const vendorMyAuth = document.getElementById('vendor-myauth');
-  if(vendorMyAuth) vendorMyAuth.href = "https://noctis-supply.mysellauth.com/";
+  if(enBtn) enBtn.addEventListener('click', ()=> setLang('en'));
+  if(deBtn) deBtn.addEventListener('click', ()=> setLang('de'));
+  setLang('en'); // default
 });
