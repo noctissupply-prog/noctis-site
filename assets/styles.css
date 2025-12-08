@@ -15,6 +15,7 @@ body{margin:0;background:var(--bg);color:var(--text);-webkit-font-smoothing:anti
 .nav-links{display:flex; gap:10px; align-items:center}
 .nav-links a{color:var(--muted); text-decoration:none; padding:8px 12px; border-radius:8px; font-weight:600; transition:color .15s ease, background .15s ease}
 .nav-links a:hover{color:var(--text); background:rgba(255,255,255,0.02)}
+.nav-right{display:flex; gap:10px; align-items:center}
 .lang-pill{border:1px solid var(--border); padding:6px 10px; border-radius:999px; color:var(--muted); cursor:pointer}
 .lang-pill.active{background:rgba(255,255,255,0.02); color:var(--text)}
 
@@ -41,6 +42,7 @@ body{margin:0;background:var(--bg);color:var(--text);-webkit-font-smoothing:anti
 .testimonials{margin-top:32px;display:grid;grid-template-columns:1fr 340px;gap:20px;align-items:start}
 .aggregate{background:linear-gradient(180deg, rgba(255,255,255,0.012), rgba(255,255,255,0)); border-radius:12px;padding:18px;border:1px solid var(--border)}
 .stars{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.star{color:gold; font-weight:800; filter:drop-shadow(0 2px 6px rgba(0,0,0,0.6))}
 .avg{font-size:28px;font-weight:800;color:var(--accent)}
 .count{color:var(--muted)}
 .test-carousel{margin-top:12px;display:flex;flex-direction:column;gap:12px}
@@ -63,7 +65,7 @@ body{margin:0;background:var(--bg);color:var(--text);-webkit-font-smoothing:anti
 .back-link{display:inline-block;margin-bottom:14px;text-decoration:none;color:var(--accent);border:1px solid var(--border);padding:8px 12px;border-radius:10px;background:transparent}
 .back-link:hover{background:rgba(255,255,255,0.02);transform:translateY(-3px)}
 
-/* force all links in panel/footer/container to look like buttons */
+/* enforce button style for all anchors inside content */
 .panel a, .container a, .site-footer a {
   display:inline-block;
   padding:10px 16px;
