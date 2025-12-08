@@ -8,58 +8,96 @@
 <script defer src="assets/script.js"></script>
 </head>
 <body>
-<header class="site-header">
-  <img src="assets/logo.png" alt="Noctis Supply" class="logo">
-  <div class="h1" id="hero-title">Noctis Supply — Built Different. Powered by Community.</div>
-  <p class="lead" id="hero-sub">Premium vendors, verified drops and curated products. No gimmicks — real value.</p>
-
-  <div class="cta-row">
-    <a id="vendor-link" class="btn" target="_blank" rel="noopener">Enter Vendor Shop</a>
-    <a id="shop-link" class="btn btn-ghost" target="_blank" rel="noopener">Enter Product Shop</a>
-  </div>
-  <div class="small-links">
-    <a id="discord-link" href="#" target="_blank" rel="noopener">Join Our Discord</a>
-    <a href="mailto:arestrot@noctissupply.online">Contact Support</a>
-  </div>
-</header>
-
-<main class="container">
-  <section class="panel">
-    <h2 id="who-title">Who we are</h2>
-    <p id="who-text">Noctis Supply connects trusted vendors with a focused community. Automation, reliability, and quality come together to offer curated streetwear, fragrances and tech essentials.</p>
-
-    <div class="cards">
-      <div class="card">
-        <h3 id="offer-1">Verified Vendor Links</h3>
-        <p id="offer-1-t">Secure MyAuth delivery and automation for digital products.</p>
+  <!-- NAV -->
+  <header class="navbar" role="banner">
+    <div class="nav-inner">
+      <div class="nav-left">
+        <a href="index.html"><img src="assets/logo.png" alt="Noctis Supply" class="logo"></a>
+        <nav class="nav-links" aria-label="Main">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="vendor.html">Vendors</a>
+          <a href="vip-412j4.html">VIP</a>
+          <a href="shipping.html">Shipping</a>
+        </nav>
       </div>
-      <div class="card">
-        <h3 id="offer-2">Physical Products</h3>
-        <p id="offer-2-t">Selected products via Shopify — secure shipping and tracking.</p>
-      </div>
-      <div class="card">
-        <h3 id="offer-3">VIP Access</h3>
-        <p id="offer-3-t">One-time VIP membership (manual approval). Priority drops & support.</p>
-        <a href="vip-412j4.html" class="button">VIP Info (Private)</a>
+      <div style="display:flex;gap:10px;align-items:center">
+        <div id="lang-en" class="lang-pill active">EN</div>
+        <div id="lang-de" class="lang-pill">DE</div>
       </div>
     </div>
+  </header>
 
-    <div style="text-align:center; margin-top:22px;">
-      <a href="vendor.html" class="btn btn-ghost">Vendor Info</a>
-      <a href="about.html" class="btn">About</a>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="h1" id="hero-title">Noctis Supply — Built Different. Powered by Community.</div>
+    <p class="lead" id="hero-sub">Premium vendors, verified drops and curated products. No gimmicks — real value.</p>
+
+    <div class="cta-row">
+      <a id="vendor-link" class="btn" target="_blank" rel="noopener">Enter Vendor Shop</a>
+      <a id="shop-link" class="btn btn-ghost" target="_blank" rel="noopener">Enter Product Shop</a>
     </div>
   </section>
-</main>
 
-<footer class="site-footer">
-  <small>© Noctis Supply 2025 — All rights reserved.</small>
-  <div>
-    <a href="privacy.html">Privacy</a>
-    <a href="terms.html">Terms</a>
-    <a href="returns.html">Returns</a>
-    <a href="shipping.html">Shipping</a>
-    <a href="impressum.html">Impressum</a>
-  </div>
-</footer>
+  <main class="container">
+    <!-- panel: who we are + features -->
+    <section class="panel">
+      <h2 id="who-title">Who we are</h2>
+      <p id="who-text">Noctis Supply connects trusted vendors with a focused community. Automation, reliability and quality come together to offer curated streetwear, fragrances and tech essentials.</p>
+
+      <div class="cards">
+        <div class="card">
+          <h3 id="offer-1">Verified Vendor Links</h3>
+          <p id="offer-1-t">Secure MyAuth delivery and automation for digital products.</p>
+        </div>
+        <div class="card">
+          <h3 id="offer-2">Physical Products</h3>
+          <p id="offer-2-t">Selected products via Shopify — secure shipping and tracking.</p>
+        </div>
+        <div class="card">
+          <h3 id="offer-3">VIP Access</h3>
+          <p id="offer-3-t">One-time VIP membership (manual approval). Priority drops & support.</p>
+          <a href="vip-412j4.html" class="button">VIP Info (Private)</a>
+        </div>
+      </div>
+
+      <!-- Testimonials -->
+      <div class="testimonials" style="margin-top:28px;">
+        <div class="test-left">
+          <div class="aggregate">
+            <div class="stars">
+              <div class="star">★</div>
+              <div class="avg"><span class="avg-rating-value">4.8</span></div>
+              <div style="margin-left:8px;color:var(--muted)" class="count review-count">84 Feedbacks</div>
+            </div>
+            <div style="color:var(--muted);font-size:14px">Average rating based on 84 verified reviews from customers and vendors.</div>
+
+            <div class="test-carousel" style="margin-top:14px"></div>
+          </div>
+        </div>
+        <aside class="test-right">
+          <div class="badge">
+            <div style="font-weight:800;color:var(--accent);font-size:18px">Trusted Network</div>
+            <div style="color:var(--muted);margin-top:8px">84 community feedbacks</div>
+          </div>
+          <div class="badge">
+            <div style="font-weight:700;color:var(--accent)">Secure Delivery</div>
+            <div style="color:var(--muted);margin-top:8px">Verified vendor links & tracked shipments</div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <small>© Noctis Supply 2025 — All rights reserved.</small>
+    <div class="links">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="impressum.html">Impressum</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </footer>
 </body>
   </html>
