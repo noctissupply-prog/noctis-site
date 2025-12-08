@@ -1,1 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Board — Noctis Supply</title>
+<link rel="stylesheet" href="assets/styles.css">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script defer src="assets/script.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-inner">
+      <div class="nav-left">
+        <a href="index.html" class="brand-link"><svg class="logo" viewBox="0 0 220 40" height="40"><text x="0" y="28" font-family="Inter, Arial" font-size="22" fill="#C0C0C0" font-weight="700">Noctis</text><text x="108" y="28" font-family="Inter, Arial" font-size="22" fill="#9c9c9c" font-weight="600">Supply</text></svg></a>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="vendor.html">Vendors</a>
+          <a href="vip-412j4.html">VIP</a>
+          <a href="board.html" aria-current="page">Board</a>
+        </nav>
+      </div>
+      <div>
+        <div id="lang-en" class="lang-pill active">EN</div>
+        <div id="lang-de" class="lang-pill">DE</div>
+      </div>
+    </div>
+  </header>
 
+  <main class="container panel">
+    <a href="index.html" class="back-link">← Back</a>
+    <h1>Board — Messages for the Community</h1>
+    <p class="muted">These are ready-made messages you can use with your Discord bot (example: `/bsay &lt;message&gt;`). Click copy to copy the full message text.</p>
+
+    <div id="board-list" class="board-grid" style="margin-top:18px"></div>
+
+    <p class="muted" style="margin-top:18px">Tip: Use `/bsay &lt;message&gt;` in your bot to broadcast. This page is static — to change it, edit the messages array in <code>assets/script.js</code>.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-col footer-brand">
+      <div style="font-weight:800;color:var(--accent)">Noctis Supply</div>
+      <div class="muted">Trusted vendor links & curated drops</div>
+    </div>
+    <div class="footer-col">
+      <a class="button" href="privacy.html">Privacy</a>
+      <a class="button" href="terms.html">Terms</a>
+    </div>
+    <div class="footer-col">
+      <a class="button" href="mailto:arestrot@noctissupply.online">Email Support</a>
+    </div>
+  </footer>
+
+<script>lucide.createIcons();</script>
+</body>
+      </html>
