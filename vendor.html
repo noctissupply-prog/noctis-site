@@ -5,21 +5,51 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Vendors — Noctis Supply</title>
 <link rel="stylesheet" href="assets/styles.css">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script defer src="assets/script.js"></script>
 </head>
 <body>
-<main class="container panel">
-  <a href="index.html" class="back-link">← Back</a>
-  <h1>Vendors & Partnerships</h1>
-  <p>We value long-term supplier relationships. If you are a vendor and want to partner, contact: <a class="button" href="mailto:arestrot@noctissupply.online">arestrot@noctissupply.online</a></p>
+  <header class="navbar">
+    <div class="nav-inner">
+      <div class="nav-left">
+        <a href="index.html" class="brand-link"><svg class="logo" viewBox="0 0 220 40" height="40"><text x="0" y="28" font-family="Inter, Arial" font-size="22" fill="#C0C0C0" font-weight="700">Noctis</text><text x="108" y="28" font-family="Inter, Arial" font-size="22" fill="#9c9c9c" font-weight="600">Supply</text></svg></a>
+        <nav class="nav-links" aria-label="Main">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="vendor.html" aria-current="page">Vendors</a>
+          <a href="vip-412j4.html">VIP</a>
+          <a href="board.html">Board</a>
+        </nav>
+      </div>
+      <div>
+        <div id="lang-en" class="lang-pill active">EN</div>
+        <div id="lang-de" class="lang-pill">DE</div>
+      </div>
+    </div>
+  </header>
 
-  <h3>Quick Links</h3>
-  <ul>
-    <li><a class="button" id="vendor-myauth" href="#" target="_blank" rel="noopener">Vendor MyAuth Portal (partner)</a></li>
-    <li><a class="button" href="#">Vendor Guidelines (coming)</a></li>
-  </ul>
-</main>
-<footer class="site-footer">
-  <a href="index.html" class="button">Home</a>
-</footer>
+  <main class="container panel">
+    <a href="index.html" class="back-link">← Back</a>
+    <h1>Vendors & Partnerships</h1>
+    <p class="muted">We value long-term supplier relationships. If you are a vendor and want to partner, contact:</p>
+    <p><a class="button" href="mailto:arestrot@noctissupply.online">arestrot@noctissupply.online</a></p>
+
+    <h3>Vendor Guidelines</h3>
+    <ul class="muted">
+      <li>Reliable communication</li>
+      <li>Clear shipping and tracking</li>
+      <li>Consistent product quality</li>
+    </ul>
+
+    <h3>Quick Links</h3>
+    <p><a id="vendor-myauth" class="button" href="#" target="_blank" rel="noopener">Vendor MyAuth Portal</a></p>
+  </main>
+
+  <footer class="site-footer">
+    <a class="button" href="index.html">Home</a>
+    <div class="footer-legal muted">© Noctis Supply 2025</div>
+  </footer>
+
+<script>lucide.createIcons();</script>
 </body>
-</html>
+    </html>
