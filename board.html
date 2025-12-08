@@ -4,15 +4,16 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Board — Noctis Supply</title>
+<meta name="description" content="Board messages for moderator or bot announcements.">
 <link rel="stylesheet" href="assets/styles.css">
 <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 <script defer src="assets/script.js"></script>
 </head>
 <body>
-  <header class="navbar">
+  <header class="navbar" role="banner">
     <div class="nav-inner">
       <div class="nav-left">
-        <a href="index.html" class="brand-link"><svg class="logo" viewBox="0 0 220 40" height="40"><text x="0" y="28" font-family="Inter, Arial" font-size="22" fill="#C0C0C0" font-weight="700">Noctis</text><text x="108" y="28" font-family="Inter, Arial" font-size="22" fill="#9c9c9c" font-weight="600">Supply</text></svg></a>
+        <a href="index.html" class="brand-link"><svg class="logo" viewBox="0 0 260 40" height="36"><text x="0" y="28" font-family="Inter, Arial" font-size="22" fill="#C0C0C0" font-weight="700">Noctis</text><text x="120" y="28" font-family="Inter, Arial" font-size="22" fill="#9c9c9c" font-weight="600">Supply</text></svg></a>
         <nav class="nav-links">
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
@@ -21,7 +22,8 @@
           <a href="board.html" aria-current="page">Board</a>
         </nav>
       </div>
-      <div>
+
+      <div class="nav-right">
         <div id="lang-en" class="lang-pill active">EN</div>
         <div id="lang-de" class="lang-pill">DE</div>
       </div>
@@ -31,11 +33,11 @@
   <main class="container panel">
     <a href="index.html" class="back-link">← Back</a>
     <h1>Board — Messages for the Community</h1>
-    <p class="muted">These are ready-made messages you can use with your Discord bot (example: `/bsay &lt;message&gt;`). Click copy to copy the full message text.</p>
+    <p class="muted">Ready-to-use messages you can post via your Discord bot (example: <code>/bsay &lt;message&gt;</code>). Click <strong>Copy</strong> to copy the full message text to clipboard.</p>
 
-    <div id="board-list" class="board-grid" style="margin-top:18px"></div>
+    <div id="board-list" class="board-grid" style="margin-top:18px" aria-live="polite"></div>
 
-    <p class="muted" style="margin-top:18px">Tip: Use `/bsay &lt;message&gt;` in your bot to broadcast. This page is static — to change it, edit the messages array in <code>assets/script.js</code>.</p>
+    <p class="muted" style="margin-top:18px">Tip: edit the messages in <code>assets/script.js</code> to keep them up to date. The bot can broadcast these messages using your admin tools.</p>
   </main>
 
   <footer class="site-footer">
@@ -54,4 +56,4 @@
 
 <script>lucide.createIcons();</script>
 </body>
-      </html>
+</html>
