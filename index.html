@@ -4,30 +4,28 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Noctis Supply — Built Different</title>
-<meta name="description" content="Noctis Supply — trusted vendor links, curated products and exclusive VIP drops. Verified vendors & secure deliveries.">
+<meta name="description" content="Noctis Supply — verified vendor links, curated products & VIP drops. Trusted network, premium experience.">
 <meta property="og:title" content="Noctis Supply — Built Different">
-<meta property="og:description" content="Trusted vendor links, curated products and exclusive VIP drops.">
-<meta property="og:type" content="website">
+<meta property="og:description" content="Trusted vendor links & curated drops. VIP early access for members.">
 <link rel="stylesheet" href="assets/styles.css">
-<!-- lucide icons -->
+<!-- lucide icons (CDN) -->
 <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 <script defer src="assets/script.js"></script>
 </head>
 <body>
   <!-- NAVBAR -->
-  <header class="navbar" role="banner">
+  <header class="navbar" role="banner" aria-label="Main navigation">
     <div class="nav-inner">
       <div class="nav-left">
-        <a href="index.html" class="brand-link">
-          <!-- inline SVG wordmark fallback -->
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 40" height="40" class="logo">
-            <rect width="220" height="40" fill="none"></rect>
+        <a href="index.html" class="brand-link" aria-label="Noctis Supply Home">
+          <!-- inline SVG wordmark (fallback, no external image needed) -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 40" height="36" class="logo">
             <text x="0" y="28" font-family="Inter, Arial" font-size="22" fill="#C0C0C0" font-weight="700">Noctis</text>
-            <text x="108" y="28" font-family="Inter, Arial" font-size="22" fill="#9c9c9c" font-weight="600">Supply</text>
+            <text x="120" y="28" font-family="Inter, Arial" font-size="22" fill="#9c9c9c" font-weight="600">Supply</text>
           </svg>
         </a>
 
-        <nav class="nav-links" aria-label="Main">
+        <nav class="nav-links" aria-label="Primary">
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
           <a href="vendor.html">Vendors</a>
@@ -37,14 +35,14 @@
       </div>
 
       <div class="nav-right">
-        <div id="lang-en" class="lang-pill active">EN</div>
-        <div id="lang-de" class="lang-pill">DE</div>
+        <div id="lang-en" class="lang-pill active" role="button" tabindex="0">EN</div>
+        <div id="lang-de" class="lang-pill" role="button" tabindex="0">DE</div>
       </div>
     </div>
   </header>
 
   <!-- HERO -->
-  <section class="hero">
+  <section class="hero" role="region" aria-label="Hero">
     <div class="h1" id="hero-title">Noctis Supply — Built Different. Powered by Community.</div>
     <p class="lead" id="hero-sub">Premium vendors, verified drops and curated products. No gimmicks — real value.</p>
 
@@ -57,19 +55,19 @@
   <main class="container">
     <section class="panel">
       <h2 id="who-title">Who we are</h2>
-      <p id="who-text">Noctis Supply connects trusted vendors with a focused community. Automation, reliability and quality come together to offer curated streetwear, fragrances and tech essentials.</p>
+      <p id="who-text" class="muted">Noctis Supply connects trusted vendors with a focused community. Automation, reliability and quality come together to offer curated streetwear, fragrances and tech essentials.</p>
 
-      <div class="cards">
+      <div class="cards" aria-hidden="false">
         <div class="card">
           <div class="card-top"><i data-lucide="shield-check" class="card-icon"></i></div>
           <h3>Verified Vendor Links</h3>
-          <p class="muted">Secure MyAuth delivery and automated vendor verification.</p>
+          <p class="muted">Secure MyAuth delivery and automated vendor verification for digital products.</p>
         </div>
 
         <div class="card">
           <div class="card-top"><i data-lucide="package" class="card-icon"></i></div>
           <h3>Physical Products</h3>
-          <p class="muted">Selected products with tracked shipping for EU customers.</p>
+          <p class="muted">Selected products with tracked shipping and simple returns for EU customers.</p>
         </div>
 
         <div class="card">
@@ -81,7 +79,7 @@
       </div>
 
       <!-- Testimonials -->
-      <div class="testimonials">
+      <div class="testimonials" aria-label="Testimonials">
         <div class="test-left">
           <div class="aggregate">
             <div class="stars">
@@ -89,12 +87,13 @@
               <div class="avg"><span class="avg-rating-value">4.8</span></div>
               <div class="count review-count">84 Feedbacks</div>
             </div>
-            <div class="muted">Average rating based on 84 community feedbacks.</div>
+            <div class="muted">Average rating based on 84 community feedbacks and purchases.</div>
 
             <div class="test-carousel" aria-live="polite"></div>
           </div>
         </div>
-        <aside class="test-right">
+
+        <aside class="test-right" aria-hidden="false">
           <div class="badge">
             <div style="font-weight:800;color:var(--accent);font-size:16px">Trusted Network</div>
             <div class="muted">84 community feedbacks</div>
