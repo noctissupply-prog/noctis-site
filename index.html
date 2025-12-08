@@ -4,24 +4,39 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Noctis Supply — Built Different</title>
+<meta name="description" content="Noctis Supply — trusted vendor links, curated products and exclusive VIP drops. Verified vendors & secure deliveries.">
+<meta property="og:title" content="Noctis Supply — Built Different">
+<meta property="og:description" content="Trusted vendor links, curated products and exclusive VIP drops.">
+<meta property="og:type" content="website">
 <link rel="stylesheet" href="assets/styles.css">
+<!-- lucide icons -->
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 <script defer src="assets/script.js"></script>
 </head>
 <body>
-  <!-- NAV -->
+  <!-- NAVBAR -->
   <header class="navbar" role="banner">
     <div class="nav-inner">
       <div class="nav-left">
-        <a href="index.html"><img src="assets/logo.png" alt="Noctis Supply" class="logo"></a>
+        <a href="index.html" class="brand-link">
+          <!-- inline SVG wordmark fallback -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 40" height="40" class="logo">
+            <rect width="220" height="40" fill="none"></rect>
+            <text x="0" y="28" font-family="Inter, Arial" font-size="22" fill="#C0C0C0" font-weight="700">Noctis</text>
+            <text x="108" y="28" font-family="Inter, Arial" font-size="22" fill="#9c9c9c" font-weight="600">Supply</text>
+          </svg>
+        </a>
+
         <nav class="nav-links" aria-label="Main">
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
           <a href="vendor.html">Vendors</a>
           <a href="vip-412j4.html">VIP</a>
-          <a href="shipping.html">Shipping</a>
+          <a href="board.html">Board</a>
         </nav>
       </div>
-      <div style="display:flex;gap:10px;align-items:center">
+
+      <div class="nav-right">
         <div id="lang-en" class="lang-pill active">EN</div>
         <div id="lang-de" class="lang-pill">DE</div>
       </div>
@@ -40,49 +55,53 @@
   </section>
 
   <main class="container">
-    <!-- panel: who we are + features -->
     <section class="panel">
       <h2 id="who-title">Who we are</h2>
       <p id="who-text">Noctis Supply connects trusted vendors with a focused community. Automation, reliability and quality come together to offer curated streetwear, fragrances and tech essentials.</p>
 
       <div class="cards">
         <div class="card">
-          <h3 id="offer-1">Verified Vendor Links</h3>
-          <p id="offer-1-t">Secure MyAuth delivery and automation for digital products.</p>
+          <div class="card-top"><i data-lucide="shield-check" class="card-icon"></i></div>
+          <h3>Verified Vendor Links</h3>
+          <p class="muted">Secure MyAuth delivery and automated vendor verification.</p>
         </div>
+
         <div class="card">
-          <h3 id="offer-2">Physical Products</h3>
-          <p id="offer-2-t">Selected products via Shopify — secure shipping and tracking.</p>
+          <div class="card-top"><i data-lucide="package" class="card-icon"></i></div>
+          <h3>Physical Products</h3>
+          <p class="muted">Selected products with tracked shipping for EU customers.</p>
         </div>
+
         <div class="card">
-          <h3 id="offer-3">VIP Access</h3>
-          <p id="offer-3-t">One-time VIP membership (manual approval). Priority drops & support.</p>
+          <div class="card-top"><i data-lucide="crown" class="card-icon"></i></div>
+          <h3>VIP Access</h3>
+          <p class="muted">One-time VIP membership (manual approval). Priority drops & support.</p>
           <a href="vip-412j4.html" class="button">VIP Info (Private)</a>
         </div>
       </div>
 
       <!-- Testimonials -->
-      <div class="testimonials" style="margin-top:28px;">
+      <div class="testimonials">
         <div class="test-left">
           <div class="aggregate">
             <div class="stars">
-              <div class="star">★</div>
+              <i data-lucide="star" class="star"></i>
               <div class="avg"><span class="avg-rating-value">4.8</span></div>
-              <div style="margin-left:8px;color:var(--muted)" class="count review-count">84 Feedbacks</div>
+              <div class="count review-count">84 Feedbacks</div>
             </div>
-            <div style="color:var(--muted);font-size:14px">Average rating based on 84 verified reviews from customers and vendors.</div>
+            <div class="muted">Average rating based on 84 community feedbacks.</div>
 
-            <div class="test-carousel" style="margin-top:14px"></div>
+            <div class="test-carousel" aria-live="polite"></div>
           </div>
         </div>
         <aside class="test-right">
           <div class="badge">
-            <div style="font-weight:800;color:var(--accent);font-size:18px">Trusted Network</div>
-            <div style="color:var(--muted);margin-top:8px">84 community feedbacks</div>
+            <div style="font-weight:800;color:var(--accent);font-size:16px">Trusted Network</div>
+            <div class="muted">84 community feedbacks</div>
           </div>
           <div class="badge">
             <div style="font-weight:700;color:var(--accent)">Secure Delivery</div>
-            <div style="color:var(--muted);margin-top:8px">Verified vendor links & tracked shipments</div>
+            <div class="muted">Verified vendor links & tracked shipments</div>
           </div>
         </aside>
       </div>
@@ -90,14 +109,30 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="site-footer">
-    <small>© Noctis Supply 2025 — All rights reserved.</small>
-    <div class="links">
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
-      <a href="impressum.html">Impressum</a>
-      <a href="contact.html">Contact</a>
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-col footer-brand">
+      <div style="font-weight:800;color:var(--accent)">Noctis Supply</div>
+      <div class="muted">Trusted vendor links & curated drops</div>
+    </div>
+
+    <div class="footer-col footer-links">
+      <div style="font-weight:700;color:var(--accent);margin-bottom:8px">Quick Links</div>
+      <a class="button" href="privacy.html">Privacy</a>
+      <a class="button" href="terms.html">Terms</a>
+      <a class="button" href="shipping.html">Shipping</a>
+      <a class="button" href="returns.html">Returns</a>
+    </div>
+
+    <div class="footer-col">
+      <div style="font-weight:700;color:var(--accent)">Contact</div>
+      <div class="footer-social" style="margin-top:8px">
+        <a class="button" href="mailto:arestrot@noctissupply.online">Email Support</a>
+        <a class="button" id="discord-btn" href="#" target="_blank" rel="noopener">Discord</a>
+      </div>
+      <div class="footer-legal muted" style="margin-top:12px">© Noctis Supply 2025</div>
     </div>
   </footer>
+
+<script>lucide.createIcons();</script>
 </body>
-  </html>
+</html>
