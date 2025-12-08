@@ -147,3 +147,26 @@ body{
 /* subtle entrance animation */
 @keyframes fadeUp { from {opacity:0; transform:translateY(8px)} to {opacity:1; transform:none} }
 .panel, .hero, .card, .aggregate { animation: fadeUp .6s ease both; }
+
+/* FORCE: style all links inside panels, containers and footer as Noctis buttons */
+.panel a,
+.container a,
+.site-footer a,
+.panel a[href^="mailto:"],
+.panel a[href^="http"] {
+  display:inline-block;
+  padding:10px 16px;
+  border-radius:10px;
+  background:transparent;
+  color:var(--accent);
+  border:1px solid var(--border);
+  text-decoration:none;
+  transition: background .18s ease, transform .18s ease, box-shadow .18s ease;
+}
+.panel a:hover,
+.container a:hover,
+.site-footer a:hover {
+  background: rgba(189,189,189,0.06);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.45);
+}
