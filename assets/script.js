@@ -1,13 +1,19 @@
 document.addEventListener('DOMContentLoaded', ()=> {
-  // ---------- Replace placeholders with real links ----------
+  // ---------------------- REPLACE THESE PLACEHOLDERS ----------------------
+  const VENDOR_LINK = "https://noctis-supply.mysellauth.com/";
+  const SHOP_LINK = "https://noctissupply.myshopify.com/";
+  const DISCORD_INVITE = "discord.gg/jRuStP7yXw";
+  const VIP_FORM = "https://docs.google.com/spreadsheets/d/1NaFjVXkD158tR-TKii0gcx2H_us1rjapiKHhLKizmUA/edit?usp=sharing"; // used in vip page
+
+  // assign links where present
   const vendorLink = document.getElementById('vendor-link');
   const shopLink = document.getElementById('shop-link');
-  const discordLink = document.getElementById('discord-btn') || document.getElementById('discord-link');
-  if(vendorLink) vendorLink.href = "https://noctis-supply.mysellauth.com/";
-  if(shopLink) shopLink.href = "https://noctissupply.myshopify.com/";
-  if(discordLink) discordLink.href = "https://discord.gg/jRuStP7yXw";
+  const discordBtns = document.querySelectorAll('#discord-btn, #discord-link');
+  if(vendorLink) vendorLink.href = VENDOR_LINK;
+  if(shopLink) shopLink.href = SHOP_LINK;
+  discordBtns.forEach(el => el && (el.href = DISCORD_INVITE));
 
-  // ---------- Language toggle ----------
+  // ---------------------- LANGUAGE TOGGLE (EN/DE minimal) ----------------------
   const enBtn = document.getElementById('lang-en');
   const deBtn = document.getElementById('lang-de');
   const texts = {
@@ -26,10 +32,14 @@ document.addEventListener('DOMContentLoaded', ()=> {
   };
   function setLang(l){
     const d = texts[l]; if(!d) return;
-    if(document.getElementById('hero-title')) document.getElementById('hero-title').textContent = d.heroTitle;
-    if(document.getElementById('hero-sub')) document.getElementById('hero-sub').textContent = d.heroSub;
-    if(document.getElementById('who-title')) document.getElementById('who-title').textContent = d.whoTitle;
-    if(document.getElementById('who-text')) document.getElementById('who-text').textContent = d.whoText;
+    const heroT = document.getElementById('hero-title');
+    const heroS = document.getElementById('hero-sub');
+    const whoT = document.getElementById('who-title');
+    const whoTxt = document.getElementById('who-text');
+    if(heroT) heroT.textContent = d.heroTitle;
+    if(heroS) heroS.textContent = d.heroSub;
+    if(whoT) whoT.textContent = d.whoTitle;
+    if(whoTxt) whoTxt.textContent = d.whoText;
     if(enBtn) enBtn.classList.toggle('active', l === 'en');
     if(deBtn) deBtn.classList.toggle('active', l === 'de');
   }
@@ -37,10 +47,10 @@ document.addEventListener('DOMContentLoaded', ()=> {
   if(deBtn) deBtn.addEventListener('click', ()=> setLang('de'));
   setLang('en');
 
-  // ---------- lucide icons ----------
-  try { if(window.lucide) lucide.createIcons(); } catch(e){/* fail silently */ }
+  // ---------------------- lucide icons render ----------------------
+  try { if(window.lucide) lucide.createIcons(); } catch(e){/* ignore */ }
 
-  // ---------- Testimonials (visible + rotating) ----------
+  // ---------------------- TESTIMONIALS (visible + rotating) ----------------------
   const testimonials = [
     {name:'M. K.', text:'Fast delivery, quality matches description. Highly recommend.', stars:5},
     {name:'L. P.', text:'Good experience — will buy again.', stars:4},
@@ -59,7 +69,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
     if(!carouselEl) return;
     const t = testimonials[i % testimonials.length];
     carouselEl.innerHTML = `
-      <div class="test-item">
+      <div class="test-item" role="article">
         <div style="display:flex;align-items:center;gap:10px;">
           <div style="font-weight:700;color:var(--accent)">${t.name}</div>
           <div style="color:var(--muted);font-size:14px">• ${t.stars}★</div>
@@ -71,9 +81,10 @@ document.addEventListener('DOMContentLoaded', ()=> {
   renderTestimonial(0);
   setInterval(()=>{ idx++; renderTestimonial(idx); }, 4200);
 
-  // ---------- Board messages (copy) ----------
+  // ---------------------- BOARD (copy buttons) ----------------------
   const boardContainer = document.getElementById('board-list');
   if(boardContainer){
+    // messages used by bot / staff — edit these to adjust broadcast text
     const messages = [
       {title:'/bsay Drop Update', text:'Heads up — new drop live now. Check vendor links in #drops and stay tuned for VIP early access.'},
       {title:'/bsay Shipping Delay', text:'Update: Some international shipments are delayed due to customs. We are tracking and will post updates in #shipping.'},
